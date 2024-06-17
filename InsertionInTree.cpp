@@ -16,7 +16,8 @@ Node * InsertElement(int value){
 void print(Node *n){
     while(n != NULL){
         cout<<n->data<<" ";
-        n = n->left;
+        // n = n->left;
+        n = n->right;
     }
 }
 int main()
