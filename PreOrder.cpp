@@ -18,17 +18,17 @@ void print(Node *n){
         n = n->right;
     }
 }
-void Inorder(Node *root){
+void PreOrder(Node *root){
+    
     if(root == NULL){
         return;
     }
-    Inorder(root->left);
-
     cout<<root->Data<<" ";
 
-    Inorder(root->right);
-}
+    PreOrder(root->left);
 
+    PreOrder(root->right);
+}
 int main(){
     Node *root = traversal(5);
     root->left = traversal(6);
@@ -37,5 +37,5 @@ int main(){
     root->left->right = traversal(9);
     root->right->left = traversal(10);
     root->right->right = traversal(11);
-    Inorder(root);
+    PreOrder(root);
 }
